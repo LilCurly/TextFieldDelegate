@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TextFieldDelegate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k80-3q-tOM">
+                                <rect key="frame" x="0.0" y="44" width="414" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QAa-0j-VCs">
+                                <rect key="frame" x="0.0" y="78" width="414" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="WQX-9k-Amv"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hbj-cH-sPQ">
+                                <rect key="frame" x="0.0" y="178" width="414" height="216"/>
+                            </pickerView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="fjo-O8-CZe">
+                                <rect key="frame" x="0.0" y="394" width="414" height="216"/>
+                            </datePicker>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k80-3q-tOM" secondAttribute="trailing" id="1yH-o3-nAW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QAa-0j-VCs" secondAttribute="trailing" id="8ga-S7-wZ2"/>
+                            <constraint firstItem="fjo-O8-CZe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="E5Q-Tz-JAj"/>
+                            <constraint firstItem="k80-3q-tOM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="IjV-Ha-0qG"/>
+                            <constraint firstItem="QAa-0j-VCs" firstAttribute="top" secondItem="k80-3q-tOM" secondAttribute="bottom" id="KJw-IL-Ti4"/>
+                            <constraint firstItem="QAa-0j-VCs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Uzc-Jg-I7L"/>
+                            <constraint firstItem="k80-3q-tOM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Wrj-m6-KeU"/>
+                            <constraint firstItem="hbj-cH-sPQ" firstAttribute="top" secondItem="QAa-0j-VCs" secondAttribute="bottom" id="cOD-Af-TyG"/>
+                            <constraint firstItem="hbj-cH-sPQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jqA-Bo-3wQ"/>
+                            <constraint firstItem="hbj-cH-sPQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="seQ-VT-LXe"/>
+                            <constraint firstItem="fjo-O8-CZe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ug1-lH-EC9"/>
+                            <constraint firstItem="fjo-O8-CZe" firstAttribute="top" secondItem="hbj-cH-sPQ" secondAttribute="bottom" id="vB1-Eg-bDf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mDatePicker" destination="fjo-O8-CZe" id="Xp8-9g-rXJ"/>
+                        <outlet property="mPickerView" destination="hbj-cH-sPQ" id="dGy-4M-nPf"/>
+                        <outlet property="mTextField" destination="k80-3q-tOM" id="s1G-AG-Mvr"/>
+                        <outlet property="mTextView" destination="QAa-0j-VCs" id="5iW-lE-f2K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="118"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
